@@ -21,7 +21,6 @@
 float mouseSensitivity = 0.05f;
 float keySensitivty = 0.05;
 glm::mat4 remember = glm::mat4(1.0);
-glm::mat4 rot = glm::mat4(1.0);
 
 
 
@@ -70,8 +69,8 @@ bool RenderEngine::loadVolumeFromFile(const char* fileName) {
     glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_NEAREST);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);
+    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 
     glTexImage3D(GL_TEXTURE_3D, 0, GL_RGBA, XDIM, YDIM, ZDIM, 0, GL_RED,
             GL_UNSIGNED_BYTE, pVolume);
@@ -118,7 +117,6 @@ void RenderEngine::draw() {
     }
 
     glUniformMatrix4fv(glGetUniformLocation(program,"old"),1,GL_FALSE,glm::value_ptr(remember));
-    glUniformMatrix4fv(glGetUniformLocation(program,"rot"),1,GL_FALSE,glm::value_ptr(rot));
 
     bb->draw(program);
 }
@@ -140,7 +138,6 @@ void RenderEngine::initGlfw() {
 
 void RenderEngine::update(float delta) {
 
-    rot = glm::rotate(rot,delta,glm::vec3(0.0,1.0,0.0));
 
     if(glfwGetKey(mainWindow,GLFW_KEY_ESCAPE) == GLFW_PRESS){
         glfwSetWindowShouldClose(mainWindow, GLFW_TRUE);

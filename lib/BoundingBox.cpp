@@ -15,8 +15,8 @@ GLuint vao, vbo;
 
 BoundingBox::BoundingBox(GLuint program) {
 
-    glm::vec3 minB(-1.0,-1.0,-1.0);
-    glm::vec3 maxB(1.0,1.0,1.0);
+    glm::vec3 minB(-1.0);
+    glm::vec3 maxB(1.0);
     // For Bounding box
 
     GLfloat vertices[] = {

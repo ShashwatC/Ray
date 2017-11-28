@@ -16,60 +16,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1bef45f4-82db-49b9-bca4-13d186b03794" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/basanti" afterPath="$PROJECT_DIR$/bin/basanti" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/ext/glad/src/glad.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/ext/glad/src/glad.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/lib/BoundingBox.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/lib/BoundingBox.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/lib/RenderEngine.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/lib/RenderEngine.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/lib/utility.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/lib/utility.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/context.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/context.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/init.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/init.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/input.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/input.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/monitor.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/monitor.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/window.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/window.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/libglfw3.a" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/libglfw3.a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/raycast.frag" afterPath="$PROJECT_DIR$/assets/raycast.frag" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assets/raycast.frag" afterPath="$PROJECT_DIR$/bin/assets/raycast.frag" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti_PRE_BUILD.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basanti_PRE_BUILD.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/basanti.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/basanti.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/CMakeFiles/uninstall.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/CMakeFiles/uninstall.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/GLFW.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/GLFW.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/cmake_uninstall.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/cmake_uninstall.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/CMakeFiles/glfw.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/ext/glfw/src/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/BoundingBox.cpp" afterPath="$PROJECT_DIR$/lib/BoundingBox.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/RenderEngine.cpp" afterPath="$PROJECT_DIR$/lib/RenderEngine.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,20 +37,8 @@
       <file leaf-file-name="BoundingBox.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/BoundingBox.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RenderEngine.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/RenderEngine.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1030">
-              <caret line="92" column="27" lean-forward="false" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+            <state relative-caret-position="206">
+              <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -108,7 +49,7 @@
       <file leaf-file-name="utility.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/utility.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-513">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -118,8 +59,8 @@
       <file leaf-file-name="raycast.frag" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/raycast.frag">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="248">
+              <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -128,8 +69,8 @@
       <file leaf-file-name="raycast.vert" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/raycast.vert">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -140,6 +81,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>glEnable</find>
+      <find>position</find>
+      <find>rot</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,6 +91,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/assets/raycast.vert" />
+        <option value="$PROJECT_DIR$/lib/RenderEngine.cpp" />
+        <option value="$PROJECT_DIR$/lib/BoundingBox.cpp" />
         <option value="$PROJECT_DIR$/assets/raycast.frag" />
       </list>
     </option>
@@ -251,12 +197,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511887001705</updated>
-      <workItem from="1511887003135" duration="135000" />
+      <workItem from="1511887003135" duration="4028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135000" />
+    <option name="totallyTimeSpent" value="4028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="707" extended-state="6" />
@@ -296,26 +242,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/raycast.vert">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/BoundingBox.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/RenderEngine.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1030">
-          <caret line="92" column="27" lean-forward="false" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+        <state relative-caret-position="565">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -324,16 +260,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/utility.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-513">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/BoundingBox.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/raycast.frag">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="248">
+          <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
           <folding />
         </state>
       </provider>
