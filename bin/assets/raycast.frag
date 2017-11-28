@@ -62,7 +62,10 @@ void main(void) {
     color = vec4(0.0);
 
     // Average intensity projection
+    int cnt = 1;    // avoid div. by 0
     for (int i = 0; i < num_steps; i++) {
+
+        cnt++;
         vec3 tmp = vec3(curPos.xy,curPos.z*2.3486238532110093);
         vec3 texPos = (1+tmp)/2;
         texPos.y = 1 - texPos.y; // Image is inverted on y
@@ -70,9 +73,10 @@ void main(void) {
         value = vec4(texture(texVol, texPos).x);
         curPos = curPos + direction * stepsize;
         color = value + color;
+        // Opacity stuff if (color.w>10)break;    // opaque now
     }
 
-    color/=num_steps;
+    color/=cnt;
     color*=4;
 
     // Maximum intensity projection
