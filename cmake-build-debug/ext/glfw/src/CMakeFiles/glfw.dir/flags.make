@@ -6,5 +6,5 @@ C_FLAGS = -g -fPIC
 
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/Users/shashwat/Downloads/yo/newrep/ext/glm -I/Users/shashwat/Downloads/yo/newrep/ext/glfw/include -I/Users/shashwat/Downloads/yo/newrep/ext/glad/include -I/Users/shashwat/Downloads/yo/newrep/ext/glfw/src -I/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/src 
+C_INCLUDES = -I/Users/shashwat/Downloads/yo/Ray/ext/glm -I/Users/shashwat/Downloads/yo/Ray/ext/glfw/include -I/Users/shashwat/Downloads/yo/Ray/ext/glad/include -I/Users/shashwat/Downloads/yo/Ray/ext/glfw/src -I/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/src 
 

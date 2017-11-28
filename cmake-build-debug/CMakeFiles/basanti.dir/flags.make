@@ -7,11 +7,11 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/shashwat/Downloads/yo/newrep/ext/glm -I/Users/shashwat/Downloads/yo/newrep/ext/glfw/include -I/Users/shashwat/Downloads/yo/newrep/ext/glad/include 
+C_INCLUDES = -I/Users/shashwat/Downloads/yo/Ray/ext/glm -I/Users/shashwat/Downloads/yo/Ray/ext/glfw/include -I/Users/shashwat/Downloads/yo/Ray/ext/glad/include 
 
 CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/shashwat/Downloads/yo/newrep/ext/glm -I/Users/shashwat/Downloads/yo/newrep/ext/glfw/include -I/Users/shashwat/Downloads/yo/newrep/ext/glad/include 
+CXX_INCLUDES = -I/Users/shashwat/Downloads/yo/Ray/ext/glm -I/Users/shashwat/Downloads/yo/Ray/ext/glfw/include -I/Users/shashwat/Downloads/yo/Ray/ext/glad/include 
 

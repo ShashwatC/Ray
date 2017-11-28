@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shashwat/Downloads/yo/newrep
+CMAKE_SOURCE_DIR = /Users/shashwat/Downloads/yo/Ray
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shashwat/Downloads/yo/newrep/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/shashwat/Downloads/yo/Ray/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/basanti.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/basanti.dir/flags.make
 
 CMakeFiles/basanti.dir/main.cpp.o: CMakeFiles/basanti.dir/flags.make
 CMakeFiles/basanti.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/basanti.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basanti.dir/main.cpp.o -c /Users/shashwat/Downloads/yo/newrep/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/basanti.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basanti.dir/main.cpp.o -c /Users/shashwat/Downloads/yo/Ray/main.cpp
 
 CMakeFiles/basanti.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basanti.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shashwat/Downloads/yo/newrep/main.cpp > CMakeFiles/basanti.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shashwat/Downloads/yo/Ray/main.cpp > CMakeFiles/basanti.dir/main.cpp.i
 
 CMakeFiles/basanti.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basanti.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shashwat/Downloads/yo/newrep/main.cpp -o CMakeFiles/basanti.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shashwat/Downloads/yo/Ray/main.cpp -o CMakeFiles/basanti.dir/main.cpp.s
 
 CMakeFiles/basanti.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/basanti.dir/main.cpp.o.provides.build: CMakeFiles/basanti.dir/main.cp
 
 CMakeFiles/basanti.dir/lib/BoundingBox.cpp.o: CMakeFiles/basanti.dir/flags.make
 CMakeFiles/basanti.dir/lib/BoundingBox.cpp.o: ../lib/BoundingBox.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/basanti.dir/lib/BoundingBox.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basanti.dir/lib/BoundingBox.cpp.o -c /Users/shashwat/Downloads/yo/newrep/lib/BoundingBox.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/basanti.dir/lib/BoundingBox.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basanti.dir/lib/BoundingBox.cpp.o -c /Users/shashwat/Downloads/yo/Ray/lib/BoundingBox.cpp
 
 CMakeFiles/basanti.dir/lib/BoundingBox.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basanti.dir/lib/BoundingBox.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shashwat/Downloads/yo/newrep/lib/BoundingBox.cpp > CMakeFiles/basanti.dir/lib/BoundingBox.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shashwat/Downloads/yo/Ray/lib/BoundingBox.cpp > CMakeFiles/basanti.dir/lib/BoundingBox.cpp.i
 
 CMakeFiles/basanti.dir/lib/BoundingBox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basanti.dir/lib/BoundingBox.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shashwat/Downloads/yo/newrep/lib/BoundingBox.cpp -o CMakeFiles/basanti.dir/lib/BoundingBox.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shashwat/Downloads/yo/Ray/lib/BoundingBox.cpp -o CMakeFiles/basanti.dir/lib/BoundingBox.cpp.s
 
 CMakeFiles/basanti.dir/lib/BoundingBox.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/basanti.dir/lib/BoundingBox.cpp.o.provides.build: CMakeFiles/basanti.
 
 CMakeFiles/basanti.dir/lib/RenderEngine.cpp.o: CMakeFiles/basanti.dir/flags.make
 CMakeFiles/basanti.dir/lib/RenderEngine.cpp.o: ../lib/RenderEngine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/basanti.dir/lib/RenderEngine.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basanti.dir/lib/RenderEngine.cpp.o -c /Users/shashwat/Downloads/yo/newrep/lib/RenderEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/basanti.dir/lib/RenderEngine.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basanti.dir/lib/RenderEngine.cpp.o -c /Users/shashwat/Downloads/yo/Ray/lib/RenderEngine.cpp
 
 CMakeFiles/basanti.dir/lib/RenderEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basanti.dir/lib/RenderEngine.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shashwat/Downloads/yo/newrep/lib/RenderEngine.cpp > CMakeFiles/basanti.dir/lib/RenderEngine.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shashwat/Downloads/yo/Ray/lib/RenderEngine.cpp > CMakeFiles/basanti.dir/lib/RenderEngine.cpp.i
 
 CMakeFiles/basanti.dir/lib/RenderEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basanti.dir/lib/RenderEngine.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shashwat/Downloads/yo/newrep/lib/RenderEngine.cpp -o CMakeFiles/basanti.dir/lib/RenderEngine.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shashwat/Downloads/yo/Ray/lib/RenderEngine.cpp -o CMakeFiles/basanti.dir/lib/RenderEngine.cpp.s
 
 CMakeFiles/basanti.dir/lib/RenderEngine.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/basanti.dir/lib/RenderEngine.cpp.o.provides.build: CMakeFiles/basanti
 
 CMakeFiles/basanti.dir/lib/utility.cpp.o: CMakeFiles/basanti.dir/flags.make
 CMakeFiles/basanti.dir/lib/utility.cpp.o: ../lib/utility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/basanti.dir/lib/utility.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basanti.dir/lib/utility.cpp.o -c /Users/shashwat/Downloads/yo/newrep/lib/utility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/basanti.dir/lib/utility.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basanti.dir/lib/utility.cpp.o -c /Users/shashwat/Downloads/yo/Ray/lib/utility.cpp
 
 CMakeFiles/basanti.dir/lib/utility.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basanti.dir/lib/utility.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shashwat/Downloads/yo/newrep/lib/utility.cpp > CMakeFiles/basanti.dir/lib/utility.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shashwat/Downloads/yo/Ray/lib/utility.cpp > CMakeFiles/basanti.dir/lib/utility.cpp.i
 
 CMakeFiles/basanti.dir/lib/utility.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basanti.dir/lib/utility.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shashwat/Downloads/yo/newrep/lib/utility.cpp -o CMakeFiles/basanti.dir/lib/utility.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shashwat/Downloads/yo/Ray/lib/utility.cpp -o CMakeFiles/basanti.dir/lib/utility.cpp.s
 
 CMakeFiles/basanti.dir/lib/utility.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/basanti.dir/lib/utility.cpp.o.provides.build: CMakeFiles/basanti.dir/
 
 CMakeFiles/basanti.dir/ext/glad/src/glad.c.o: CMakeFiles/basanti.dir/flags.make
 CMakeFiles/basanti.dir/ext/glad/src/glad.c.o: ../ext/glad/src/glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/basanti.dir/ext/glad/src/glad.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/basanti.dir/ext/glad/src/glad.c.o   -c /Users/shashwat/Downloads/yo/newrep/ext/glad/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/basanti.dir/ext/glad/src/glad.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/basanti.dir/ext/glad/src/glad.c.o   -c /Users/shashwat/Downloads/yo/Ray/ext/glad/src/glad.c
 
 CMakeFiles/basanti.dir/ext/glad/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/basanti.dir/ext/glad/src/glad.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/shashwat/Downloads/yo/newrep/ext/glad/src/glad.c > CMakeFiles/basanti.dir/ext/glad/src/glad.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/shashwat/Downloads/yo/Ray/ext/glad/src/glad.c > CMakeFiles/basanti.dir/ext/glad/src/glad.c.i
 
 CMakeFiles/basanti.dir/ext/glad/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/basanti.dir/ext/glad/src/glad.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/shashwat/Downloads/yo/newrep/ext/glad/src/glad.c -o CMakeFiles/basanti.dir/ext/glad/src/glad.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/shashwat/Downloads/yo/Ray/ext/glad/src/glad.c -o CMakeFiles/basanti.dir/ext/glad/src/glad.c.s
 
 CMakeFiles/basanti.dir/ext/glad/src/glad.c.o.requires:
 
@@ -196,7 +196,7 @@ basanti_EXTERNAL_OBJECTS =
 ../bin/basanti: CMakeFiles/basanti.dir/build.make
 ../bin/basanti: ext/glfw/src/libglfw3.a
 ../bin/basanti: CMakeFiles/basanti.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ../bin/basanti"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ../bin/basanti"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/basanti.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -217,6 +217,6 @@ CMakeFiles/basanti.dir/clean:
 .PHONY : CMakeFiles/basanti.dir/clean
 
 CMakeFiles/basanti.dir/depend:
-	cd /Users/shashwat/Downloads/yo/newrep/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shashwat/Downloads/yo/newrep /Users/shashwat/Downloads/yo/newrep /Users/shashwat/Downloads/yo/newrep/cmake-build-debug /Users/shashwat/Downloads/yo/newrep/cmake-build-debug /Users/shashwat/Downloads/yo/newrep/cmake-build-debug/CMakeFiles/basanti.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/shashwat/Downloads/yo/Ray/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shashwat/Downloads/yo/Ray /Users/shashwat/Downloads/yo/Ray /Users/shashwat/Downloads/yo/Ray/cmake-build-debug /Users/shashwat/Downloads/yo/Ray/cmake-build-debug /Users/shashwat/Downloads/yo/Ray/cmake-build-debug/CMakeFiles/basanti.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/basanti.dir/depend
 

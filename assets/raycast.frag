@@ -33,7 +33,7 @@ void main(void) {
         color = value + color;
     }
     color/=20;
-    color = vec4(direction,1.0);
+    color = vec4(1.0,0.4,0.5,1.0);
 
 
 }

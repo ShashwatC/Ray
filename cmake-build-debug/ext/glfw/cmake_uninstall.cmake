@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/install_manifest.txt\"")
+if (NOT EXISTS "/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/install_manifest.txt" files)
+file(READ "/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/shashwat/Downloads/yo/newrep
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/shashwat/Downloads/yo/Ray
 -- The C compiler identification is AppleClang 9.0.0.9000037
 -- The CXX compiler identification is AppleClang 9.0.0.9000037
 -- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
@@ -20,7 +20,7 @@
 -- Found Threads: TRUE  
 -- Could NOT find Vulkan (missing:  VULKAN_LIBRARY VULKAN_INCLUDE_DIR) 
 -- Using Cocoa for window creation
--- current source dir in macro /Users/shashwat/Downloads/yo/newrep
+-- current source dir in macro /Users/shashwat/Downloads/yo/Ray
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/shashwat/Downloads/yo/newrep/cmake-build-debug
+-- Build files have been written to: /Users/shashwat/Downloads/yo/Ray/cmake-build-debug

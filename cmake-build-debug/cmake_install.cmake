@@ -1,4 +1,4 @@
-# Install script for directory: /Users/shashwat/Downloads/yo/newrep
+# Install script for directory: /Users/shashwat/Downloads/yo/Ray
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/cmake_install.cmake")
+  include("/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/cmake_install.cmake")
 
 endif()
 
@@ -41,5 +41,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

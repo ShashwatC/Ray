@@ -1,4 +1,4 @@
-# Install script for directory: /Users/shashwat/Downloads/yo/newrep/ext/glfw
+# Install script for directory: /Users/shashwat/Downloads/yo/Ray/ext/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -28,13 +28,13 @@ if(NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/Users/shashwat/Downloads/yo/newrep/ext/glfw/include/GLFW" FILES_MATCHING REGEX "/glfw3\\.h$" REGEX "/glfw3native\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/Users/shashwat/Downloads/yo/Ray/ext/glfw/include/GLFW" FILES_MATCHING REGEX "/glfw3\\.h$" REGEX "/glfw3native\\.h$")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES
-    "/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/src/glfw3Config.cmake"
-    "/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/src/glfw3ConfigVersion.cmake"
+    "/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/src/glfw3Config.cmake"
+    "/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/src/glfw3ConfigVersion.cmake"
     )
 endif()
 
@@ -42,7 +42,7 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3/glfw3Targets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3/glfw3Targets.cmake"
-         "/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets.cmake")
+         "/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3/glfw3Targets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -51,19 +51,19 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets-debug.cmake")
   endif()
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/src/glfw3.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/src/glfw3.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/shashwat/Downloads/yo/newrep/cmake-build-debug/ext/glfw/src/cmake_install.cmake")
+  include("/Users/shashwat/Downloads/yo/Ray/cmake-build-debug/ext/glfw/src/cmake_install.cmake")
 
 endif()
 
