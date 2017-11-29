@@ -23,6 +23,8 @@ float keySensitivty = 0.05;
 glm::mat4 remember = glm::mat4(1.0);
 float iso = 5.0;
 
+float arr[5];
+
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 
@@ -77,31 +79,9 @@ bool RenderEngine::loadVolumeFromFile(const char* fileName) {
     glGenerateMipmap(GL_TEXTURE_3D);
     delete [] pVolume;
 
-    // Create a 1D texture for mapping iso values to colors (lookup table basically)
-    const int Size = 20;
-
-    glm::vec4 Mapping[Size];
-    Mapping[6] = glm::vec4(0.0,0.0,1.0,0.8);
-    Mapping[5] = glm::vec4(1.0,0.0,0.0,0.3);
-    Mapping[9] = glm::vec4(1.0,0.9,0.8,1.0);
-
-    float pData[Size][4];
-    for(int i=0;i<Size;i++) {
-        pData[i][0] = Mapping[i].x;
-        pData[i][1] = Mapping[i].y;
-        pData[i][2] = Mapping[i].z;
-        pData[i][3] = Mapping[i].w;
+    for (int i=0;i<5;i++){
+        arr[i] = 0.5;
     }
-
-    glGenTextures(1, &textureID2);
-    glBindTexture(GL_TEXTURE_1D, textureID2);
-
-    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);    // GL_REPEAT?
-    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-
-    glTexImage1D(GL_TEXTURE_1D,0,GL_RGBA,Size,0,GL_RGBA,GL_FLOAT,pData);
-
     return true;
 }
 
@@ -124,6 +104,39 @@ void RenderEngine::run() {
 }
 
 void RenderEngine::draw() {
+
+    for (int i=1;i<=4;i++){
+        arr[i] = std::min(arr[i],1.0f);
+        arr[i] = std::max(arr[i],0.0f);
+        // Clip to (0,1)
+    }
+
+    // Create a 1D texture for mapping iso values to colors (lookup table basically)
+    const int Size = 6;
+
+    glm::vec4 Mapping[Size];
+    Mapping[1] = glm::vec4(1.0,0.0,0.0,arr[1]);
+    Mapping[2] = glm::vec4(0.0,1.0,0.0,arr[2]);
+    Mapping[3] = glm::vec4(0.0,0.0,1.0,arr[3]);
+    Mapping[4] = glm::vec4(0.0,0.0,1.0,arr[4]);
+
+    float pData[Size][4];
+    for(int i=0;i<Size;i++) {
+        pData[i][0] = Mapping[i].x;
+        pData[i][1] = Mapping[i].y;
+        pData[i][2] = Mapping[i].z;
+        pData[i][3] = Mapping[i].w;
+    }
+
+    glGenTextures(1, &textureID2);
+    glBindTexture(GL_TEXTURE_1D, textureID2);
+
+    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);    // GL_REPEAT?
+    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+
+    glTexImage1D(GL_TEXTURE_1D,0,GL_RGBA,Size,0,GL_RGBA,GL_FLOAT,pData);
+
 
     glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
     glClearDepth(1.0f);
@@ -208,6 +221,33 @@ void RenderEngine::update(float delta) {
     else if(glfwGetKey(mainWindow,GLFW_KEY_S) == GLFW_PRESS){
         position-=up*keySensitivty;
     }
+    else if(glfwGetKey(mainWindow,GLFW_KEY_1) == GLFW_PRESS){
+        arr[1]+=keySensitivty;
+    }
+    else if(glfwGetKey(mainWindow,GLFW_KEY_2) == GLFW_PRESS){
+        arr[2]+=keySensitivty;
+    }
+    else if(glfwGetKey(mainWindow,GLFW_KEY_3) == GLFW_PRESS){
+        arr[3]+=keySensitivty;
+    }
+    else if(glfwGetKey(mainWindow,GLFW_KEY_4) == GLFW_PRESS){
+        arr[4]+=keySensitivty;
+    }
+    else if(glfwGetKey(mainWindow,GLFW_KEY_5) == GLFW_PRESS){
+        arr[1]-=keySensitivty;
+    }
+    else if(glfwGetKey(mainWindow,GLFW_KEY_6) == GLFW_PRESS){
+        arr[2]-=keySensitivty;
+    }
+    else if(glfwGetKey(mainWindow,GLFW_KEY_7) == GLFW_PRESS){
+        arr[3]-=keySensitivty;
+    }
+    else if(glfwGetKey(mainWindow,GLFW_KEY_8) == GLFW_PRESS){
+        arr[4]-=keySensitivty;
+    }
+
+
+
 
 
 
