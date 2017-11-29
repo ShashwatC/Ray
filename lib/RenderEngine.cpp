@@ -78,20 +78,16 @@ bool RenderEngine::loadVolumeFromFile(const char* fileName) {
     delete [] pVolume;
 
     // Create a 1D texture for mapping iso values to colors (lookup table basically)
-    const int Size = 9;
-    const glm::vec4 Mapping[Size]={	glm::vec4(0,0,0.5,0),
-                                       glm::vec4(0,0,1,0.1),
-                                       glm::vec4(0,0.5,1,0.3),
-                                       glm::vec4(0,1,1,0.5),
-                                       glm::vec4(0.5,1,0.5,0.75),
-                                       glm::vec4(1,1,0,0.8),
-                                       glm::vec4(1,0.5,0,0.6),
-                                       glm::vec4(1,0,0,0.5),
-                                       glm::vec4(0.5,0,0,0.0)};
+    const int Size = 4;
+
+    const glm::vec4 Mapping[Size]={	glm::vec4(0,0,0.0,0),
+                                       glm::vec4(1,0,0,0.1),
+                                       glm::vec4(0,1,0,0.1),
+                                       glm::vec4(0,0,1,0.1)};
 
 
     float pData[Size][4];
-    for(int i=0;i<9;i++) {
+    for(int i=0;i<Size;i++) {
         pData[i][0] = Mapping[i].x;
         pData[i][1] = Mapping[i].y;
         pData[i][2] = Mapping[i].z;
@@ -99,15 +95,14 @@ bool RenderEngine::loadVolumeFromFile(const char* fileName) {
     }
 
     glGenTextures(1, &textureID2);
-    glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_1D, textureID2);
 
     glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);    // GL_REPEAT?
     glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 
-    //allocate the data to texture memory. Since pData is on stack, we donot delete it
     glTexImage1D(GL_TEXTURE_1D,0,GL_RGBA,Size,0,GL_RGBA,GL_FLOAT,pData);
+
     return true;
 }
 
@@ -153,6 +148,17 @@ void RenderEngine::draw() {
     }
 
     glUniformMatrix4fv(glGetUniformLocation(program,"old"),1,GL_FALSE,glm::value_ptr(remember));
+
+    glUniform1i(glGetUniformLocation(program, "texVol"), 0);
+    glUniform1i(glGetUniformLocation(program, "tf"), 1);
+
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_3D, textureID);
+
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_1D, textureID2);
+
+
 
     bb->draw(program);
 }
