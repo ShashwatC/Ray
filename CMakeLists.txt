@@ -21,11 +21,17 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/bin)
 include_directories("ext/glm/"
         "ext/glfw/include"
         "ext/glad/include"
+        "ext/imgui"
         )
 option(GLFW_BUILD_DOCS OFF)
 option(GLFW_BUILD_EXAMPLES OFF)
 option(GLFW_BUILD_TESTS OFF)
 add_subdirectory(ext/glfw)
+
+file(GLOB IMGUI_SOURCE
+        ext/imgui/*.cpp
+        ext/imgui/*.h
+        )
 
 set(PLATFORM_LINK )
 if (UNIX)
@@ -40,7 +46,8 @@ set(SOURCE_FILES ${SRC_CPP} ${SRC_HDR})
 #TODO add your source files here
 set(SOURCE_FILES main.cpp ${SRC_CPP} ${SRC_HDR})
 
-add_executable(${AssignmentNameHere} ${SOURCE_FILES} ${DEPS_SOURCES})
+add_executable(${AssignmentNameHere} ${SOURCE_FILES} ${DEPS_SOURCES}
+    ${IMGUI_SOURCE})
 target_link_libraries(${AssignmentNameHere} glfw ${GLFW_LIBRARIES} ${PLATFORM_LINK})
 
 pre_build(${AssignmentNameHere}

@@ -7,6 +7,8 @@
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/string_cast.hpp>
 #include <GLFW/glfw3.h>
+#include <imgui_impl_glfw_gl3.h>
+
 #include <iostream>
 #include <stdio.h>
 
@@ -173,10 +175,12 @@ void RenderEngine::draw() {
 
 
     bb->draw(program);
+
+    drawTransferEditor();
 }
 
 void RenderEngine::initGlfw() {
-    mainWindow = setupGlfw(600, 400, "Main");
+    mainWindow = setupGlfw(800, 600, "Main");
 
     glfwSetWindowUserPointer(mainWindow, this);
 
@@ -188,6 +192,8 @@ void RenderEngine::initGlfw() {
         std::cout << "Failed to initialize OpenGL context" << std::endl;
         exit(-1);
     }
+
+    ImGui_ImplGlfwGL3_Init(mainWindow, false);
 }
 
 void RenderEngine::update(float delta) {
@@ -221,39 +227,30 @@ void RenderEngine::update(float delta) {
     else if(glfwGetKey(mainWindow,GLFW_KEY_S) == GLFW_PRESS){
         position-=up*keySensitivty;
     }
-    else if(glfwGetKey(mainWindow,GLFW_KEY_1) == GLFW_PRESS){
-        arr[1]+=keySensitivty;
-    }
-    else if(glfwGetKey(mainWindow,GLFW_KEY_2) == GLFW_PRESS){
-        arr[2]+=keySensitivty;
-    }
-    else if(glfwGetKey(mainWindow,GLFW_KEY_3) == GLFW_PRESS){
-        arr[3]+=keySensitivty;
-    }
-    else if(glfwGetKey(mainWindow,GLFW_KEY_4) == GLFW_PRESS){
-        arr[4]+=keySensitivty;
-    }
-    else if(glfwGetKey(mainWindow,GLFW_KEY_5) == GLFW_PRESS){
-        arr[1]-=keySensitivty;
-    }
-    else if(glfwGetKey(mainWindow,GLFW_KEY_6) == GLFW_PRESS){
-        arr[2]-=keySensitivty;
-    }
-    else if(glfwGetKey(mainWindow,GLFW_KEY_7) == GLFW_PRESS){
-        arr[3]-=keySensitivty;
-    }
-    else if(glfwGetKey(mainWindow,GLFW_KEY_8) == GLFW_PRESS){
-        arr[4]-=keySensitivty;
-    }
-
-
-
-
-
-
-
-
-
+    //else if(glfwGetKey(mainWindow,GLFW_KEY_1) == GLFW_PRESS){
+    //    arr[1]+=keySensitivty;
+    //}
+    //else if(glfwGetKey(mainWindow,GLFW_KEY_2) == GLFW_PRESS){
+    //    arr[2]+=keySensitivty;
+    //}
+    //else if(glfwGetKey(mainWindow,GLFW_KEY_3) == GLFW_PRESS){
+    //    arr[3]+=keySensitivty;
+    //}
+    //else if(glfwGetKey(mainWindow,GLFW_KEY_4) == GLFW_PRESS){
+    //    arr[4]+=keySensitivty;
+    //}
+    //else if(glfwGetKey(mainWindow,GLFW_KEY_5) == GLFW_PRESS){
+    //    arr[1]-=keySensitivty;
+    //}
+    //else if(glfwGetKey(mainWindow,GLFW_KEY_6) == GLFW_PRESS){
+    //    arr[2]-=keySensitivty;
+    //}
+    //else if(glfwGetKey(mainWindow,GLFW_KEY_7) == GLFW_PRESS){
+    //    arr[3]-=keySensitivty;
+    //}
+    //else if(glfwGetKey(mainWindow,GLFW_KEY_8) == GLFW_PRESS){
+    //    arr[4]-=keySensitivty;
+    //}
 
     double posX,posY;
     glfwGetCursorPos(mainWindow,&posX,&posY);
@@ -267,12 +264,8 @@ void RenderEngine::update(float delta) {
     static double lastY = 0;
 
     if(prevState == GLFW_RELEASE && currState == GLFW_PRESS) {
-
-
         lastX = posX;
         lastY = posY;
-
-
     }
     else if(prevState == GLFW_PRESS && currState == GLFW_PRESS){
 
@@ -302,6 +295,25 @@ void RenderEngine::update(float delta) {
 
 }
 
+void RenderEngine::drawTransferEditor() {
+    ImGui_ImplGlfwGL3_NewFrame();
+
+    ImGui::SetNextWindowSize(ImVec2(230, 130));
+    ImGui::SetNextWindowPos(ImVec2(550,0));
+    bool show_another_window = true;
+
+    ImGui::Begin("Transfer Function Editor", &show_another_window, 
+            ImGuiWindowFlags_NoResize);
+
+    ImGui::SliderFloat("Red:", &arr[1], 0.0f, 1.0f);
+    ImGui::SliderFloat("Green:", &arr[2], 0.0f, 1.0f);
+    ImGui::SliderFloat("Blue:", &arr[3], 0.0f, 1.0f);
+    ImGui::SliderFloat("Alpha:", &arr[4], 0.0f, 1.0f);
+
+    ImGui::End();
+
+    ImGui::Render();
+}
 
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
@@ -310,5 +322,3 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
     ptr->position+=ptr->front*(float)yoffset;
 
 }
-
-

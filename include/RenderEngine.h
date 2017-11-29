@@ -25,6 +25,7 @@ public:
     void run();
     void draw();
     void initGlfw();
+    void drawTransferEditor();
 private:
     void update(float delta);
     GLFWwindow * mainWindow = nullptr;
