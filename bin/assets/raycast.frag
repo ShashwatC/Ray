@@ -3,11 +3,13 @@
 in vec3 fpos;           // Position on cube (unmodified)
 
 uniform sampler3D texVol;
+uniform sampler1D tf;
 uniform vec3 viewPos;   // Position of eye  (unmodified)
 
 uniform mat4 mvp;       // MVP matrix
 uniform mat4 v;         // View matrix
 uniform mat4 old;       // Initial mvp matrix
+uniform float isoSurf;     // For isosurface extraction
 
 out vec4 color;
 
@@ -37,11 +39,26 @@ void IntersectBox(Ray r, BoundingBox cuboid, out float entry, out float exit)
 
 }
 
+void isoSurface(vec3 left, vec3 right, float iso, out vec3 surf){
+    int rec_depth = 5;
+    for (int iter = 0; iter<rec_depth; iter++)
+    {
+        vec3 mid = (right+left)/2.0;
+        float curIso = texture(texVol, mid).x ;
+        if(curIso <= iso)
+            left = mid;
+        else
+            right = mid;
+    }
+    surf =  vec3(right + left)/2.0;
+
+}
+
 void main(void) {
 
     BoundingBox cuboid = BoundingBox(vec3(-1.0),vec3(1.0)); // Create bounding box
 
-    vec4 value;
+    vec4 value,valueNext;
     vec3 direction = fpos - viewPos;
     direction = normalize(direction);
     //direction = vec3(v*vec4(direction,1.0));
@@ -60,35 +77,35 @@ void main(void) {
     vec3 curPos = entry;
 
     color = vec4(0.0);
+    float iso = isoSurf - floor(isoSurf);
 
     // Average intensity projection
     int cnt = 1;    // avoid div. by 0
     for (int i = 0; i < num_steps; i++) {
-
         cnt++;
         vec3 tmp = vec3(curPos.xy,curPos.z*2.3486238532110093);
         vec3 texPos = (1+tmp)/2;
         texPos.y = 1 - texPos.y; // Image is inverted on y
-
-        value = vec4(texture(texVol, texPos).x);
         curPos = curPos + direction * stepsize;
-        color = value + color;
-        // Opacity stuff if (color.w>10)break;    // opaque now
+        tmp = vec3(curPos.xy,curPos.z*2.3486238532110093);
+        vec3 texPosNext = (1+tmp)/2;
+        texPosNext.y = 1 - texPosNext.y; // Image is inverted on y
+        float iso1 = texture(texVol, texPos).x;
+        float iso2 = texture(texVol, texPosNext).x;
+        if (iso1<iso && iso2>iso){
+            // Reqd. isosurface is in between
+            vec3 texIso;
+            isoSurface(texPos,texPosNext,iso,texIso);
+            value = vec4(texture(texVol, texIso).x);
+            color = color + value;
+
+        }
+        else{
+            cnt--;
+        }
     }
 
     color/=cnt;
-    color*=4;
-
-    // Maximum intensity projection
-/*
-    for (int i = 0; i < num_steps; i++) {
-        vec3 tmp = vec3(curPos.xy,curPos.z*2.3486238532110093);
-        vec3 texPos = (1+tmp)/2;
-        texPos.y = 1 - texPos.y; // Image is inverted on y
-
-        value = vec4(texture(texVol, texPos).x);
-        curPos = curPos + direction * stepsize;
-        color = max(value,color);
-    }
-    */
+    float compensate = 1/(iso+0.5);
+    color*=compensate;
 }

@@ -9,7 +9,7 @@
 
 class RenderEngine {
 public:
-    GLuint textureID;
+    GLuint textureID, textureID2;
     GLuint program;
 
     BoundingBox * bb;

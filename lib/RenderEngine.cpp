@@ -21,7 +21,7 @@
 float mouseSensitivity = 0.05f;
 float keySensitivty = 0.05;
 glm::mat4 remember = glm::mat4(1.0);
-
+float iso = 5.0;
 
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
@@ -76,6 +76,38 @@ bool RenderEngine::loadVolumeFromFile(const char* fileName) {
             GL_UNSIGNED_BYTE, pVolume);
     glGenerateMipmap(GL_TEXTURE_3D);
     delete [] pVolume;
+
+    // Create a 1D texture for mapping iso values to colors (lookup table basically)
+    const int Size = 9;
+    const glm::vec4 Mapping[Size]={	glm::vec4(0,0,0.5,0),
+                                       glm::vec4(0,0,1,0.1),
+                                       glm::vec4(0,0.5,1,0.3),
+                                       glm::vec4(0,1,1,0.5),
+                                       glm::vec4(0.5,1,0.5,0.75),
+                                       glm::vec4(1,1,0,0.8),
+                                       glm::vec4(1,0.5,0,0.6),
+                                       glm::vec4(1,0,0,0.5),
+                                       glm::vec4(0.5,0,0,0.0)};
+
+
+    float pData[Size][4];
+    for(int i=0;i<9;i++) {
+        pData[i][0] = Mapping[i].x;
+        pData[i][1] = Mapping[i].y;
+        pData[i][2] = Mapping[i].z;
+        pData[i][3] = Mapping[i].w;
+    }
+
+    glGenTextures(1, &textureID2);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_1D, textureID2);
+
+    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);    // GL_REPEAT?
+    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+
+    //allocate the data to texture memory. Since pData is on stack, we donot delete it
+    glTexImage1D(GL_TEXTURE_1D,0,GL_RGBA,Size,0,GL_RGBA,GL_FLOAT,pData);
     return true;
 }
 
@@ -90,6 +122,8 @@ void RenderEngine::run() {
         update(delta);
         glEnable(GL_CULL_FACE);
         glCullFace(GL_FRONT); // The normals point inwards!
+        //glEnable(GL_BLEND);
+        //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // Not needed in raycasting
         draw();
         glfwSwapBuffers(mainWindow);
     }
@@ -111,6 +145,8 @@ void RenderEngine::draw() {
 
     glUniformMatrix4fv(glGetUniformLocation(program,"mvp"),1,GL_FALSE,glm::value_ptr(projection*v));
     glUniformMatrix4fv(glGetUniformLocation(program,"v"),1,GL_FALSE,glm::value_ptr(v));
+    float sens = 10; // sensitivity
+    glUniform1f(glGetUniformLocation(program,"isoSurf"),iso/sens);
 
     if (remember == glm::mat4(1.0)){
         remember = projection*v;
@@ -156,17 +192,18 @@ void RenderEngine::update(float delta) {
         position-=right*keySensitivty;
     }
     else if(glfwGetKey(mainWindow,GLFW_KEY_UP) == GLFW_PRESS){
-        position+=up*keySensitivty;
+        iso += keySensitivty; //position+=up*keySensitivty;
     }
     else if(glfwGetKey(mainWindow,GLFW_KEY_W) == GLFW_PRESS){
         position+=up*keySensitivty;
     }
     else if(glfwGetKey(mainWindow,GLFW_KEY_DOWN) == GLFW_PRESS){
-        position-=up*keySensitivty;
+        iso -= keySensitivty; //position-=up*keySensitivty;
     }
     else if(glfwGetKey(mainWindow,GLFW_KEY_S) == GLFW_PRESS){
         position-=up*keySensitivty;
     }
+
 
 
 
