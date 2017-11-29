@@ -89,6 +89,7 @@ void main(void) {
             texPos.y = 1 - texPos.y; // Image is inverted on y
             //value = vec4(texture(texVol, texPos).x);
             value = texture(tf,texture(texVol, texPos).x);
+            value.xyz *= value.w;
             curPos = curPos + direction * stepsize;
             color = value + color;
             // Opacity stuff if (color.w>10)break;    // opaque now
@@ -96,5 +97,5 @@ void main(void) {
 
 
     color/=cnt;
-    color*=4;
+    color*=10;
 }

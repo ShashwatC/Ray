@@ -78,13 +78,12 @@ bool RenderEngine::loadVolumeFromFile(const char* fileName) {
     delete [] pVolume;
 
     // Create a 1D texture for mapping iso values to colors (lookup table basically)
-    const int Size = 4;
+    const int Size = 20;
 
-    const glm::vec4 Mapping[Size]={	glm::vec4(0,0,0.0,0),
-                                       glm::vec4(1,0,0,0.1),
-                                       glm::vec4(0,1,0,0.1),
-                                       glm::vec4(0,0,1,0.1)};
-
+    glm::vec4 Mapping[Size];
+    Mapping[6] = glm::vec4(0.0,0.0,1.0,0.8);
+    Mapping[5] = glm::vec4(1.0,0.0,0.0,0.3);
+    Mapping[9] = glm::vec4(1.0,0.9,0.8,1.0);
 
     float pData[Size][4];
     for(int i=0;i<Size;i++) {
