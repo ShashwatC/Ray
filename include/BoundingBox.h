@@ -11,6 +11,6 @@
 class BoundingBox {
 
 public:
-    BoundingBox(GLuint program);
+    BoundingBox();
     void draw(GLuint program);
 };

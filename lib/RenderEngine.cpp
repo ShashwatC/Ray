@@ -25,6 +25,12 @@ float keySensitivty = 0.05;
 glm::mat4 remember = glm::mat4(1.0);
 float iso = 5.0;
 
+float keyPressTime = 0.0f;
+
+GLuint program;
+GLuint isoProgram;
+GLuint transferProgram;
+
 float arr[5];
 
 
@@ -33,20 +39,25 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 RenderEngine::RenderEngine(const char * volpath) {
     auto vert(fileToCharArr("../assets/raycast.vert"));
     auto frag(fileToCharArr("../assets/raycast.frag"));
+    auto isoFrag(fileToCharArr("../assets/isosurface.frag"));
+
     initGlfw();
 
     //Create program
-    program = makeProgram(compileShader(shDf(GL_VERTEX_SHADER,&vert[0],vert.size())),
+    transferProgram = makeProgram(compileShader(shDf(GL_VERTEX_SHADER,&vert[0],vert.size())),
             compileShader(shDf(GL_FRAGMENT_SHADER,&frag[0],frag.size())),true);
+    isoProgram = makeProgram(compileShader(shDf(GL_VERTEX_SHADER,&vert[0],vert.size())),
+            compileShader(shDf(GL_FRAGMENT_SHADER,&isoFrag[0],isoFrag.size())),true);
 
-    BoundingBox * bb = new BoundingBox(program);
+    BoundingBox * bb = new BoundingBox();
+    program = transferProgram;
+
     position = glm::vec3(0,0,2);
     front = glm::vec3(0,0,-1);
     up = glm::vec3(0,1,0);
     right = glm::vec3(1,0,0);
 
     loadVolumeFromFile(volpath);
-
 }
 
 bool RenderEngine::loadVolumeFromFile(const char* fileName) {
@@ -172,8 +183,6 @@ void RenderEngine::draw() {
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_1D, textureID2);
 
-
-
     bb->draw(program);
 
     drawTransferEditor();
@@ -215,17 +224,26 @@ void RenderEngine::update(float delta) {
     else if(glfwGetKey(mainWindow,GLFW_KEY_A) == GLFW_PRESS){
         position-=right*keySensitivty;
     }
-    else if(glfwGetKey(mainWindow,GLFW_KEY_UP) == GLFW_PRESS){
-        iso += keySensitivty; //position+=up*keySensitivty;
-    }
+    //else if(glfwGetKey(mainWindow,GLFW_KEY_UP) == GLFW_PRESS){
+    //    iso += keySensitivty; //position+=up*keySensitivty;
+    //}
     else if(glfwGetKey(mainWindow,GLFW_KEY_W) == GLFW_PRESS){
         position+=up*keySensitivty;
     }
-    else if(glfwGetKey(mainWindow,GLFW_KEY_DOWN) == GLFW_PRESS){
-        iso -= keySensitivty; //position-=up*keySensitivty;
-    }
+    //else if(glfwGetKey(mainWindow,GLFW_KEY_DOWN) == GLFW_PRESS){
+    //    iso -= keySensitivty; //position-=up*keySensitivty;
+    //}
     else if(glfwGetKey(mainWindow,GLFW_KEY_S) == GLFW_PRESS){
         position-=up*keySensitivty;
+    }
+    else if(glfwGetKey(mainWindow,GLFW_KEY_Q) == GLFW_PRESS){
+        if (keyPressTime >= 0.1) {
+            program = (program == transferProgram) ? isoProgram : transferProgram;
+            keyPressTime = 0.0f;
+        }
+        else {
+            keyPressTime += keySensitivty;
+        }
     }
     //else if(glfwGetKey(mainWindow,GLFW_KEY_1) == GLFW_PRESS){
     //    arr[1]+=keySensitivty;
@@ -298,17 +316,20 @@ void RenderEngine::update(float delta) {
 void RenderEngine::drawTransferEditor() {
     ImGui_ImplGlfwGL3_NewFrame();
 
-    ImGui::SetNextWindowSize(ImVec2(230, 130));
+    ImGui::SetNextWindowSize(ImVec2(230, 190));
     ImGui::SetNextWindowPos(ImVec2(550,0));
     bool show_another_window = true;
 
     ImGui::Begin("Transfer Function Editor", &show_another_window, 
             ImGuiWindowFlags_NoResize);
 
+    ImGui::Text("Press Q to switch between\ntransfer function and\nisosurface view.");
+
     ImGui::SliderFloat("Red:", &arr[1], 0.0f, 1.0f);
     ImGui::SliderFloat("Green:", &arr[2], 0.0f, 1.0f);
     ImGui::SliderFloat("Blue:", &arr[3], 0.0f, 1.0f);
     ImGui::SliderFloat("Alpha:", &arr[4], 0.0f, 1.0f);
+    ImGui::SliderFloat("Iso:", &iso, 1.0f, 6.0f);
 
     ImGui::End();
 

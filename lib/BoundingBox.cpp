@@ -13,7 +13,7 @@
 
 GLuint vao, vbo;
 
-BoundingBox::BoundingBox(GLuint program) {
+BoundingBox::BoundingBox() {
 
     glm::vec3 minB(-1.0,-1.0,-0.42578125);
     glm::vec3 maxB(1.0,1.0,0.42578125);
